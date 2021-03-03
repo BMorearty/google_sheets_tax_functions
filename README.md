@@ -8,22 +8,24 @@ US Federal tax only.
 
 # Usage
 
-Calculate federal income tax on $50,000 of income:
+Calculate federal income tax on $50,000 of income if you are Married Filing Jointly:
 
 ```
-=INCOMETAX(50000)
+=INCOMETAX(50000, "MFJ")
 ```
 
-Calculate federal short term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income:
+Calculate federal short term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income
+and are Married Filing Jointly:
 
 ```
-=STCGTAX(50000, 40000)
+=STCGTAX(50000, 40000, "MFJ")
 ```
 
-Calculate federal long term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income:
+Calculate federal long term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income
+and are Married Filing Jointly:
 
 ```
-=LTCGTAX(50000, 40000)
+=LTCGTAX(50000, 40000, "MFJ")
 ```
 
 # Installation
