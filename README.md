@@ -4,7 +4,7 @@ Functions for Google Sheets to calculate income tax and short/long term capital 
 
 US Federal tax only.
 
-**Currently based on 2021 tax rates.**
+**Currently based on 2021 tax rates for Married Filing Jointly.**
 
 # Usage
 
