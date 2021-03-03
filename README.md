@@ -30,5 +30,5 @@ Calculate federal long term capital gains tax on $40,000 of capital gains if you
 
 1. Make a Google sheet.
 2. Choose **Tools: Script Editor** from the menu.
-3. Paste these functions. Now they're available for use in the sheet.
+3. Paste the contents of `tax_functions.js`. Now they're available for use in the sheet.
 
