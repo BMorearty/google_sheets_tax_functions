@@ -1,5 +1,8 @@
 // Given some income, return the income tax amount. Based on 2021 rates.
-function INCOMETAX(income) {
+function INCOMETAX(income, filingStatus) {
+  if (filingStatus !== 'MFJ') {
+    throw new Error('filingStatus currently only supports MFJ');
+  }
   if (income <= 19900) {
     return income * 0.10;
   }
@@ -23,15 +26,21 @@ function INCOMETAX(income) {
 
 // Given some regular income and some short term capital gains, return the the short term
 // capital gains tax. Based on 2021 rates (same rates as income tax).
-function STCGTAX(regularIncome, shortTermCapitalGains) {
-  var regularTax = INCOMETAX(regularIncome);
-  var totalTax = INCOMETAX(regularIncome + shortTermCapitalGains);
+function STCGTAX(regularIncome, shortTermCapitalGains, filingStatus) {
+  if (filingStatus !== 'MFJ') {
+    throw new Error('filingStatus currently only supports MFJ');
+  }
+  var regularTax = INCOMETAX(regularIncome, filingStatus);
+  var totalTax = INCOMETAX(regularIncome + shortTermCapitalGains, filingStatus);
   return totalTax - regularTax;
 }
 
 // Given some regular income and some long term capital gains, return the long term
 // capital gains tax. Based on 2021 rates.
-function LTCGTAX(regularIncome, longTermCapitalGains) {
+function LTCGTAX(regularIncome, longTermCapitalGains, filingStatus) {
+  if (filingStatus !== 'MFJ') {
+    throw new Error('filingStatus currently only supports MFJ');
+  }
   var taxedAt = {
     0: 0,
     15: 0,
