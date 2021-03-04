@@ -1,4 +1,3 @@
-
 const incomeTaxBrackets = {
   'S': [
     {threshold: 0,      rate: 0.10},
@@ -24,7 +23,7 @@ const incomeTaxBrackets = {
 function INCOMETAX(income, filingStatus) {
   const brackets = incomeTaxBrackets[filingStatus];
   if (!brackets) {
-    throw new Error(`"${filingStatus}" not supported as a filing status`);
+    throw new Error(`"${filingStatus}" not one of the supported filing statuses: ${Object.keys(incomeTaxBrackets)}`);
   }
 
   let tax = 0;
@@ -48,9 +47,6 @@ function INCOMETAX(income, filingStatus) {
 // Given some regular income and some short term capital gains, return the the short term
 // capital gains tax. Based on 2021 rates (same rates as income tax).
 function STCGTAX(regularIncome, shortTermCapitalGains, filingStatus) {
-  if (filingStatus !== 'MFJ') {
-    throw new Error('filingStatus currently only supports MFJ');
-  }
   var regularTax = INCOMETAX(regularIncome, filingStatus);
   var totalTax = INCOMETAX(regularIncome + shortTermCapitalGains, filingStatus);
   return totalTax - regularTax;
