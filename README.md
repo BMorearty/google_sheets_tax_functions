@@ -34,5 +34,5 @@ and are Married Filing Jointly:
 2. Choose **Tools: Script Editor** from the menu.
 3. Remove the contents of the file (the function called `myFunction`).
 4. Paste the contents of `tax_functions.js` into the file.
-5. Click the 'Save project" button in the toolbar at the top. 
-7. Now they're available for use in the sheet.
+5. Click the 'Save project" button in the toolbar at the top. <img width="102" alt="Screen Shot 2021-03-03 at 9 39 20 PM" src="https://user-images.githubusercontent.com/16927/109916905-479fd700-7c69-11eb-831b-b22d72b1b974.png">
+6. Now they're available for use in the sheet.
