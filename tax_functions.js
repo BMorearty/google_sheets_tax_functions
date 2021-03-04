@@ -1,27 +1,39 @@
+
+const incomeTaxBrackets = {
+  'MFJ': [
+    {threshold: 0,      rate: 0.10},
+    {threshold: 19901,  rate: 0.12},
+    {threshold: 81051,  rate: 0.22},
+    {threshold: 172751, rate: 0.24},
+    {threshold: 329851, rate: 0.32},
+    {threshold: 418851, rate: 0.35},
+    {threshold: 628301, rate: 0.37},
+  ],
+};
+
 // Given some income, return the income tax amount. Based on 2021 rates.
 function INCOMETAX(income, filingStatus) {
-  if (filingStatus !== 'MFJ') {
-    throw new Error('filingStatus currently only supports MFJ');
+  const brackets = incomeTaxBrackets[filingStatus];
+  if (!brackets) {
+    throw new Error(`"${filingStatus}" not supported as a filing status`);
   }
-  if (income <= 19900) {
-    return income * 0.10;
+
+  let tax = 0;
+
+  for (let i = 0; i < brackets.length; i++) {
+    const rate = brackets[i].rate;
+    const min  = Math.max(0, brackets[i].threshold - 1);
+    const max  = brackets[i + 1] ? brackets[i + 1].threshold - 1 : income;
+
+    const taxableInCurrentBracket = Math.min(income, max) - min;
+    if (taxableInCurrentBracket < 0) {
+      break;
+    }
+
+    tax += taxableInCurrentBracket * rate;
   }
-  if (income <= 81050) {
-    return 1990 + (income - 19900) * 0.12;
-  }
-  if (income <= 172750) {
-    return 9328 + (income - 81050) * 0.22;
-  }
-  if (income <= 329850) {
-    return 29502 + (income - 172750) * 0.24;
-  }
-  if (income <= 418850) {
-    return 67206 + (income - 329850) * 0.32;
-  }
-  if (income <= 628300) {
-    return 95686 + (income - 418850) * 0.35;
-  }
-  return 168993.50 + (income - 628300) * 0.37;
+
+  return tax;
 }
 
 // Given some regular income and some short term capital gains, return the the short term
