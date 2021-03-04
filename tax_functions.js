@@ -1,5 +1,14 @@
 
 const incomeTaxBrackets = {
+  'S': [
+    {threshold: 0,      rate: 0.10},
+    {threshold: 9951,   rate: 0.12},
+    {threshold: 40526,  rate: 0.22},
+    {threshold: 86376,  rate: 0.24},
+    {threshold: 164926, rate: 0.32},
+    {threshold: 209426, rate: 0.35},
+    {threshold: 523601, rate: 0.37},
+  ],
   'MFJ': [
     {threshold: 0,      rate: 0.10},
     {threshold: 19901,  rate: 0.12},
