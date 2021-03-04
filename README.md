@@ -32,5 +32,7 @@ and are Married Filing Jointly:
 
 1. Make a Google sheet.
 2. Choose **Tools: Script Editor** from the menu.
-3. Paste the contents of `tax_functions.js`. Now they're available for use in the sheet.
-
+3. Remove the contents of the file (the function called `myFunction`).
+4. Paste the contents of `tax_functions.js` into the file.
+5. Click the 'Save project" button in the toolbar at the top. 
+7. Now they're available for use in the sheet.
