@@ -41,5 +41,5 @@ and are Married Filing Jointly:
 
 To run tests:
 
-1. In the Script Editor, select the `TEST_ALL` function to run. ![image](https://user-images.githubusercontent.com/16927/110350152-47e0ff00-7fe8-11eb-957e-6c5235b88ed1.png)
+1. In the Script Editor, select the `TEST_ALL` function to run. ![image](https://user-images.githubusercontent.com/16927/110350252-5cbd9280-7fe8-11eb-99d3-abb2095a0361.png)
 2. Click the Run button.
