@@ -4,28 +4,28 @@ Functions for Google Sheets to calculate income tax and short/long term capital 
 
 US Federal tax only.
 
-**Currently based on 2021 tax rates for Married Filing Jointly or Single.**
+Supports 2020 and 2021 tax years, all filing statuses.
 
 # Usage
 
-Calculate federal income tax on $50,000 of income if you are Married Filing Jointly:
+Calculate federal income tax for 2021 on $50,000 of income if you are Married Filing Jointly:
 
 ```
-=INCOMETAX(50000, "MFJ")
+=INCOMETAX(50000, "MFJ", 2021)
 ```
 
-Calculate federal short term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income
+Calculate federal short term capital gains tax for 2021 on $40,000 of capital gains if you had $50,000 of regular income
 and are Married Filing Jointly:
 
 ```
-=STCGTAX(50000, 40000, "MFJ")
+=STCGTAX(50000, 40000, "MFJ", 2021)
 ```
 
-Calculate federal long term capital gains tax on $40,000 of capital gains if you had $50,000 of regular income
+Calculate federal long term capital gains for 2021 tax on $40,000 of capital gains if you had $50,000 of regular income
 and are Married Filing Jointly:
 
 ```
-=LTCGTAX(50000, 40000, "MFJ")
+=LTCGTAX(50000, 40000, "MFJ", 2021)
 ```
 
 # Installation
