@@ -126,7 +126,9 @@ const longTermCapGainsBrackets = {
 
 // Given some income, return the income tax amount. Defaults to 2021 rates.
 function INCOMETAX(income, filingStatus, year) {
-  if (!year) year = 2021;
+  if (!incomeTaxBrackets[year]) {
+    throw new Error(`${year} is not one of the supported years: ${Object.keys(incomeTaxBrackets)}`);
+  }
   const brackets = incomeTaxBrackets[year][filingStatus];
   if (!brackets) {
     throw new Error(`"${filingStatus}" not one of the supported filing statuses: ${Object.keys(incomeTaxBrackets[year])}`);
@@ -153,7 +155,6 @@ function INCOMETAX(income, filingStatus, year) {
 // Given some regular income and some short term capital gains, return the the short term
 // capital gains tax. Defaults to 2021 rates (same rates as income tax).
 function STCGTAX(regularIncome, shortTermCapitalGains, filingStatus, year) {
-  if (!year) year = 2021;
   let regularTax = INCOMETAX(regularIncome, filingStatus, year);
   let totalTax = INCOMETAX(regularIncome + shortTermCapitalGains, filingStatus, year);
   return totalTax - regularTax;
@@ -162,7 +163,9 @@ function STCGTAX(regularIncome, shortTermCapitalGains, filingStatus, year) {
 // Given some regular income and some long term capital gains, return the long term
 // capital gains tax. Defaults to 2021 rates.
 function LTCGTAX(regularIncome, longTermCapitalGains, filingStatus, year) {
-  if (!year) year = 2021;
+  if (!longTermCapGainsBrackets[year]) {
+    throw new Error(`${year} is not one of the supported years: ${Object.keys(longTermCapGainsBrackets)}`);
+  }
   const brackets = longTermCapGainsBrackets[year][filingStatus];
   if (!brackets) {
     throw new Error(`"${filingStatus}" not one of the supported filing statuses: ${Object.keys(incomeTaxBrackets[year])}`);
