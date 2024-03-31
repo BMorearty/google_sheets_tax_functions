@@ -74,7 +74,121 @@ const incomeTaxBrackets = {
       {threshold: 209400, rate: 0.35},
       {threshold: 523600, rate: 0.37},
     ],
-  }
+  },
+  2022: {
+    'S': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 10275,  rate: 0.12},
+      {threshold: 41775,  rate: 0.22},
+      {threshold: 89075,  rate: 0.24},
+      {threshold: 170050, rate: 0.32},
+      {threshold: 215950, rate: 0.35},
+      {threshold: 539900, rate: 0.37},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 20550,  rate: 0.12},
+      {threshold: 83550,  rate: 0.22},
+      {threshold: 178150, rate: 0.24},
+      {threshold: 340100, rate: 0.32},
+      {threshold: 431900, rate: 0.35},
+      {threshold: 647850, rate: 0.37},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 10275,  rate: 0.12},
+      {threshold: 41775,  rate: 0.22},
+      {threshold: 89075,  rate: 0.24},
+      {threshold: 170050, rate: 0.32},
+      {threshold: 215950, rate: 0.35},
+      {threshold: 323925, rate: 0.37},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 14650,  rate: 0.12},
+      {threshold: 55900,  rate: 0.22},
+      {threshold: 89050,  rate: 0.24},
+      {threshold: 170050, rate: 0.32},
+      {threshold: 215950, rate: 0.35},
+      {threshold: 539900, rate: 0.37},
+    ],
+  },
+  2023: {
+    'S': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11000,  rate: 0.12},
+      {threshold: 44725,  rate: 0.22},
+      {threshold: 95375,  rate: 0.24},
+      {threshold: 182100, rate: 0.32},
+      {threshold: 231250, rate: 0.35},
+      {threshold: 578125, rate: 0.37},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 22000,  rate: 0.12},
+      {threshold: 89450,  rate: 0.22},
+      {threshold: 190750, rate: 0.24},
+      {threshold: 364200, rate: 0.32},
+      {threshold: 462500, rate: 0.35},
+      {threshold: 693750, rate: 0.37},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11000,  rate: 0.12},
+      {threshold: 44725,  rate: 0.22},
+      {threshold: 95375,  rate: 0.24},
+      {threshold: 182100, rate: 0.32},
+      {threshold: 231250, rate: 0.35},
+      {threshold: 346875, rate: 0.37},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 15700,  rate: 0.12},
+      {threshold: 59850,  rate: 0.22},
+      {threshold: 95350,  rate: 0.24},
+      {threshold: 182100, rate: 0.32},
+      {threshold: 231250, rate: 0.35},
+      {threshold: 578100, rate: 0.37},
+    ],
+  },
+  2024: {
+    'S': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11600,  rate: 0.12},
+      {threshold: 47150,  rate: 0.22},
+      {threshold: 100575,  rate: 0.24},
+      {threshold: 191950, rate: 0.32},
+      {threshold: 243725, rate: 0.35},
+      {threshold: 609350, rate: 0.37},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 23200,  rate: 0.12},
+      {threshold: 94300,  rate: 0.22},
+      {threshold: 201050, rate: 0.24},
+      {threshold: 383900, rate: 0.32},
+      {threshold: 487450, rate: 0.35},
+      {threshold: 731200, rate: 0.37},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11600,  rate: 0.12},
+      {threshold: 47150,  rate: 0.22},
+      {threshold: 100525, rate: 0.24},
+      {threshold: 191950, rate: 0.32},
+      {threshold: 243725, rate: 0.35},
+      {threshold: 365600, rate: 0.37},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 16550,  rate: 0.12},
+      {threshold: 63100,  rate: 0.22},
+      {threshold: 100500, rate: 0.24},
+      {threshold: 191950, rate: 0.32},
+      {threshold: 243700, rate: 0.35},
+      {threshold: 609350, rate: 0.37},
+    ],
+  },
 };
 
 const longTermCapGainsBrackets = {
@@ -82,46 +196,112 @@ const longTermCapGainsBrackets = {
     'S': [
       {threshold: 0,      rate: 0.0},
       {threshold: 40000,  rate: 0.15},
-      {threshold: 441450, rate: 0.20}
+      {threshold: 441450, rate: 0.20},
     ],
     'MFJ': [
       {threshold: 0,      rate: 0.0},
       {threshold: 80000,  rate: 0.15},
-      {threshold: 496600, rate: 0.20}
+      {threshold: 496600, rate: 0.20},
     ],
     'MFS': [
       {threshold: 0,      rate: 0.0},
       {threshold: 40000,  rate: 0.15},
-      {threshold: 248300, rate: 0.20}
+      {threshold: 248300, rate: 0.20},
     ],
     'HOH': [
       {threshold: 0,      rate: 0.0},
       {threshold: 53600,  rate: 0.15},
-      {threshold: 469050, rate: 0.20}
+      {threshold: 469050, rate: 0.20},
     ],
   },
   2021: {
     'S': [
       {threshold: 0,      rate: 0.0},
       {threshold: 40400,  rate: 0.15},
-      {threshold: 445850, rate: 0.20}
+      {threshold: 445850, rate: 0.20},
     ],
     'MFJ': [
       {threshold: 0,      rate: 0.0},
       {threshold: 80800,  rate: 0.15},
-      {threshold: 501600, rate: 0.20}
+      {threshold: 501600, rate: 0.20},
     ],
     'MFS': [
       {threshold: 0,      rate: 0.0},
       {threshold: 40400,  rate: 0.15},
-      {threshold: 250800, rate: 0.20}
+      {threshold: 250800, rate: 0.20},
     ],
     'HOH': [
       {threshold: 0,      rate: 0.0},
       {threshold: 54100,  rate: 0.15},
-      {threshold: 473750, rate: 0.20}
+      {threshold: 473750, rate: 0.20},
     ],
-  }
+  },
+  2022: {
+    'S': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 41675,  rate: 0.15},
+      {threshold: 459750, rate: 0.20},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 83850,  rate: 0.15},
+      {threshold: 517200, rate: 0.20},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 41675,  rate: 0.15},
+      {threshold: 258600, rate: 0.20},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 55800,  rate: 0.15},
+      {threshold: 488500, rate: 0.20},
+    ],
+  },
+  2023: {
+    'S': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 44625,  rate: 0.15},
+      {threshold: 492300, rate: 0.20},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 89250,  rate: 0.15},
+      {threshold: 553850, rate: 0.20},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 44625,  rate: 0.15},
+      {threshold: 276900, rate: 0.20},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 59750,  rate: 0.15},
+      {threshold: 523050, rate: 0.20},
+    ],
+  },
+  2024: {
+    'S': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 47025,  rate: 0.15},
+      {threshold: 518900, rate: 0.20},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 94050,  rate: 0.15},
+      {threshold: 583750, rate: 0.20},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 47025,  rate: 0.15},
+      {threshold: 291850, rate: 0.20},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 63000,  rate: 0.15},
+      {threshold: 551350, rate: 0.20},
+    ],
+  },
 }
 
 // Given some income, return the income tax amount. Defaults to 2021 rates.
