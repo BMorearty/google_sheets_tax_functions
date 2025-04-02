@@ -189,7 +189,44 @@ const incomeTaxBrackets = {
       {threshold: 609350, rate: 0.37},
     ],
   },
-};
+  2025: {
+    'S': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11925,  rate: 0.12},
+      {threshold: 48475,  rate: 0.22},
+      {threshold: 103350,  rate: 0.24},
+      {threshold: 197300, rate: 0.32},
+      {threshold: 250525, rate: 0.35},
+      {threshold: 626350, rate: 0.37},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 23850,  rate: 0.12},
+      {threshold: 96950,  rate: 0.22},
+      {threshold: 206700, rate: 0.24},
+      {threshold: 394600, rate: 0.32},
+      {threshold: 501050, rate: 0.35},
+      {threshold: 751600, rate: 0.37},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 11925,  rate: 0.12},
+      {threshold: 48475,  rate: 0.22},
+      {threshold: 103350, rate: 0.24},
+      {threshold: 197300, rate: 0.32},
+      {threshold: 250525, rate: 0.35},
+      {threshold: 375800, rate: 0.37},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 17000,  rate: 0.12},
+      {threshold: 64850,  rate: 0.22},
+      {threshold: 103350, rate: 0.24},
+      {threshold: 197300, rate: 0.32},
+      {threshold: 250500, rate: 0.35},
+      {threshold: 626350, rate: 0.37},
+    ],
+  }};
 
 const longTermCapGainsBrackets = {
   2020: {
@@ -300,6 +337,28 @@ const longTermCapGainsBrackets = {
       {threshold: 0,      rate: 0.0},
       {threshold: 63000,  rate: 0.15},
       {threshold: 551350, rate: 0.20},
+    ],
+  },
+  2025: {
+    'S': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 48350,  rate: 0.15},
+      {threshold: 533400, rate: 0.20},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 96700,  rate: 0.15},
+      {threshold: 600050, rate: 0.20},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 48350,  rate: 0.15},
+      {threshold: 300000, rate: 0.20},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 64750,  rate: 0.15},
+      {threshold: 566700, rate: 0.20},
     ],
   },
 }
