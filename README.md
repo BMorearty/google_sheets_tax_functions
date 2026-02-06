@@ -4,7 +4,7 @@ Functions for Google Sheets to calculate income tax and short/long term capital 
 
 US Federal tax only.
 
-Supports 2020 through 2025 tax years, all filing statuses.
+Supports 2020 through 2026 tax years, all filing statuses.
 
 # Usage
 

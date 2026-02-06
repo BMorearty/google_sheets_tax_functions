@@ -156,7 +156,7 @@ const incomeTaxBrackets = {
       {threshold: 0,      rate: 0.10},
       {threshold: 11600,  rate: 0.12},
       {threshold: 47150,  rate: 0.22},
-      {threshold: 100575,  rate: 0.24},
+      {threshold: 100575, rate: 0.24},
       {threshold: 191950, rate: 0.32},
       {threshold: 243725, rate: 0.35},
       {threshold: 609350, rate: 0.37},
@@ -194,7 +194,7 @@ const incomeTaxBrackets = {
       {threshold: 0,      rate: 0.10},
       {threshold: 11925,  rate: 0.12},
       {threshold: 48475,  rate: 0.22},
-      {threshold: 103350,  rate: 0.24},
+      {threshold: 103350, rate: 0.24},
       {threshold: 197300, rate: 0.32},
       {threshold: 250525, rate: 0.35},
       {threshold: 626350, rate: 0.37},
@@ -225,6 +225,44 @@ const incomeTaxBrackets = {
       {threshold: 197300, rate: 0.32},
       {threshold: 250500, rate: 0.35},
       {threshold: 626350, rate: 0.37},
+    ],
+  },
+  2026: {
+    'S': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 12400,  rate: 0.12},
+      {threshold: 50400,  rate: 0.22},
+      {threshold: 105700, rate: 0.24},
+      {threshold: 201775, rate: 0.32},
+      {threshold: 256225, rate: 0.35},
+      {threshold: 640600, rate: 0.37},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 24800,  rate: 0.12},
+      {threshold: 100800, rate: 0.22},
+      {threshold: 211400, rate: 0.24},
+      {threshold: 403550, rate: 0.32},
+      {threshold: 512450, rate: 0.35},
+      {threshold: 768700, rate: 0.37},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 12400,  rate: 0.12},
+      {threshold: 50400,  rate: 0.22},
+      {threshold: 105700, rate: 0.24},
+      {threshold: 201775, rate: 0.32},
+      {threshold: 256225, rate: 0.35},
+      {threshold: 384350, rate: 0.37},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.10},
+      {threshold: 17700,  rate: 0.12},
+      {threshold: 67450,  rate: 0.22},
+      {threshold: 105700, rate: 0.24},
+      {threshold: 201750, rate: 0.32},
+      {threshold: 256200, rate: 0.35},
+      {threshold: 640600, rate: 0.37},
     ],
   }};
 
@@ -361,6 +399,28 @@ const longTermCapGainsBrackets = {
       {threshold: 566700, rate: 0.20},
     ],
   },
+  2026: {
+    'S': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 49450,  rate: 0.15},
+      {threshold: 545500, rate: 0.20},
+    ],
+    'MFJ': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 98900,  rate: 0.15},
+      {threshold: 613700, rate: 0.20},
+    ],
+    'MFS': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 49450,  rate: 0.15},
+      {threshold: 306851, rate: 0.20},
+    ],
+    'HOH': [
+      {threshold: 0,      rate: 0.0},
+      {threshold: 66200,  rate: 0.15},
+      {threshold: 579600, rate: 0.20},
+    ],
+  },
 }
 
 // Given some income, return the income tax amount. Defaults to 2021 rates.
@@ -424,7 +484,7 @@ function LTCGTAX(regularIncome, longTermCapitalGains, filingStatus, year) {
       capitalGainsAtBracket = remainingCapitalGains;
     }
     tax += capitalGainsAtBracket * brackets[i].rate;
-  };
+  }
   return tax;
 }
 
